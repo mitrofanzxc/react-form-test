@@ -1,7 +1,6 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
-
+import { createRoot } from 'react-dom/client';
 import { App } from './App';
 import './index.scss';
 

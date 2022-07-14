@@ -1,5 +1,10 @@
 import { MouseEvent } from 'react';
 
+export interface IPATHS {
+  main: string;
+  notFound: '*';
+}
+
 export interface IPrimaryButton {
   description: string;
   className: string;

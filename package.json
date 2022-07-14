@@ -1,8 +1,8 @@
 {
-  "name": "online-store",
+  "name": "react-form-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rolling-scopes-school.github.io/mitrofanzxc-JSFE2022Q1/online-store",
+  "homepage": "https://mitrofanzxc.github.io/react-form-test",
   "dependencies": {
     "jwt-decode": "^3.1.2",
     "react": "^18.1.0",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d ./build -e online-store",
+    "deploy": "gh-pages -d build",
     "start": "cross-env HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

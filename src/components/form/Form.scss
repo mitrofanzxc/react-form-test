@@ -1,19 +1,15 @@
 @import '../../sass/Constants.scss';
 
-.modal {
-  display: none;
+.form-wrapper {
+  position: relative;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  width: 27.7vw;
-  height: 53.3vh;
+  justify-content: space-between;
+  flex-direction: column;
+  width: $base * 120;
+  height: $base * 120;
   margin: auto;
-  padding: $base * 14 $base * 13 $base * 19 $base * 13;
+  padding: $base * 10;
   background: rgb(237, 242, 245);
   background: -moz-linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
   background: -webkit-linear-gradient(
@@ -24,40 +20,8 @@
   background: linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f5",endColorstr="#ffffff",GradientType=1);
   border-radius: $base * 7;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   text-align: center;
-
-  @media (max-width: $breakpoint-lg-min) {
-    width: 70vw;
-    height: 80vh;
-  }
-}
-
-.modal-active {
-  display: flex;
-}
-
-.modal__shadow {
-  content: '';
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  width: 100vw;
-  height: 100vh;
-  background-color: $color-dark-06;
-}
-
-.modal__shadow-active {
-  display: block;
-}
-
-.modal__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 
   .h2 {
     font-size: $base * 6;
@@ -122,6 +86,7 @@
   flex-direction: column;
   gap: $base;
   width: 80%;
+  text-align: center;
 }
 
 .input-phone {

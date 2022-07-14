@@ -1,0 +1,12 @@
+@import '../../../sass/Constants.scss';
+
+.input-phone__label {
+  display: flex;
+  flex-direction: column;
+  gap: $base * 2;
+}
+
+.input-phone {
+  color: $color-dark;
+  text-align: left;
+}

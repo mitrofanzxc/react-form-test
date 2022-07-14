@@ -1,4 +1,6 @@
 import { FC, useState, useEffect, FocusEvent, ChangeEvent, MouseEvent } from 'react';
+import { InputCheckbox } from './inputCheckbox/InputCheckbox';
+import { InputTel } from './inputTel/InputTel';
 import { PrimaryButton } from '../buttons';
 import './Form.scss';
 
@@ -7,8 +9,8 @@ const Form: FC = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [isPhoneBlur, setIsPhoneBlur] = useState<boolean>(false);
   const [isCheckedBlur, setIsCheckedBlur] = useState<boolean>(false);
-  const [isPhoneError, setIsPhoneError] = useState<string>('Номер не может быть пустым.');
-  const [isCheckedError, setIsCheckedError] = useState<string>('Вы должны принять условия.');
+  const [isPhoneError, setIsPhoneError] = useState<string>('The field cannot be empty.');
+  const [isCheckedError, setIsCheckedError] = useState<string>('You must accept the terms.');
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
   const blurHandler = (event: FocusEvent<HTMLInputElement>) => {
@@ -29,7 +31,7 @@ const Form: FC = () => {
     const result =
       /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/gm;
     if (!result.test(String(VALUE).toLocaleLowerCase())) {
-      setIsPhoneError('Некорректный номер.');
+      setIsPhoneError('Invalid number.');
     } else {
       setIsPhoneError('');
     }
@@ -38,7 +40,7 @@ const Form: FC = () => {
   const checkboxHandler = () => {
     setIsChecked(!isChecked);
     if (isChecked) {
-      setIsCheckedError('Вы должны принять условия.');
+      setIsCheckedError('You must accept the terms.');
     } else {
       setIsCheckedError('');
     }
@@ -46,10 +48,8 @@ const Form: FC = () => {
 
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    // modalEventHandler();
     setIsPhone('');
     setIsChecked(false);
-    // handleIsToastOpen(true);
   };
 
   useEffect(() => {
@@ -61,31 +61,27 @@ const Form: FC = () => {
   }, [isPhoneError, isCheckedError]);
 
   return (
-    <div className="modal__container">
-      <h2 className="h2">
-        Быстро
-        <br />
-        оставить заявку
-      </h2>
-      <p>Введите номер, мы позвоним вам в течение 10 минут в рабочее время</p>
-      <p>Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00</p>
-      <form className="form">
-        <label>
+    <section className="form-wrapper">
+      <h2 className="h2">Leave a request quickly!</h2>
+      <p>Enter the number, we will call you within 10 minutes during work hours:</p>
+      <p>Mon – Fri 9:00 - 18:00, Sat 10:00 - 18:00.</p>
+      <form data-testid="form" className="form">
+        <label className="input-phone__label">
           Enter your phone number:
           <input
-            type="tel"
-            id="phone"
-            name="phone"
             className="primary-button input-phone"
+            type="tel"
+            id="tel"
+            name="tel"
             placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _"
             onBlur={(event) => blurHandler(event)}
             onChange={(event) => phoneHandler(event)}
             value={isPhone}
           />
         </label>
-        <div className="error-field">{isPhoneBlur && isPhoneError ? isPhoneError : ''}</div>
+        <p className="error-field">{isPhoneBlur && isPhoneError ? isPhoneError : ''}</p>
         <PrimaryButton
-          description="Позвоните мне"
+          description="Call me"
           className="bg-orange"
           arrow="arrow-right"
           type="submit"
@@ -104,14 +100,15 @@ const Form: FC = () => {
             <span className="checkmark" />
           </label>
           <p className="checkbox__info">
-            Нажимая кнопку вы соглашаетесь с условиями <br />
-            <strong className="medium color-orange">Политики конфиденциальности</strong>
+            By clicking the button you agree to the terms&nbsp;
+            <a href="#" className="medium color-orange">
+              Privacy Policy
+            </a>
           </p>
         </div>
-        <div className="error-field">{isCheckedBlur && isCheckedError ? isCheckedError : ''}</div>
+        <p className="error-field">{isCheckedBlur && isCheckedError ? isCheckedError : ''}</p>
       </form>
-      <button className="button-navigation button-navigation__close" />
-    </div>
+    </section>
   );
 };
 

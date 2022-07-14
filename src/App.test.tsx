@@ -11,7 +11,7 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    const HEADER = screen.getByTestId('header');
-    expect(HEADER).toBeInTheDocument();
+    const FORM = screen.getByTestId('form');
+    expect(FORM).toBeInTheDocument();
   });
 });

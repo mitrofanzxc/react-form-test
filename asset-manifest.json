@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-form-test/static/css/main.69c03708.css",
-    "main.js": "/react-form-test/static/js/main.c2b2a89f.js",
+    "main.css": "/react-form-test/static/css/main.cb6ad004.css",
+    "main.js": "/react-form-test/static/js/main.a77783e4.js",
     "static/media/Montserrat-Bold.woff": "/react-form-test/static/media/Montserrat-Bold.180ba33d8de7dcfe80a0.woff",
     "static/media/Montserrat-Regular.woff": "/react-form-test/static/media/Montserrat-Regular.3db65dc4b858f0fed4fb.woff",
     "static/media/Montserrat-Medium.woff": "/react-form-test/static/media/Montserrat-Medium.d42dad28f6470e5162c2.woff",
@@ -15,11 +15,11 @@
     "index.html": "/react-form-test/index.html",
     "static/media/arrow-right.svg": "/react-form-test/static/media/arrow-right.ee70254d437467a9cf3c.svg",
     "static/media/arrow.svg": "/react-form-test/static/media/arrow.ea54e3ccae61a36c993a.svg",
-    "main.69c03708.css.map": "/react-form-test/static/css/main.69c03708.css.map",
-    "main.c2b2a89f.js.map": "/react-form-test/static/js/main.c2b2a89f.js.map"
+    "main.cb6ad004.css.map": "/react-form-test/static/css/main.cb6ad004.css.map",
+    "main.a77783e4.js.map": "/react-form-test/static/js/main.a77783e4.js.map"
   },
   "entrypoints": [
-    "static/css/main.69c03708.css",
-    "static/js/main.c2b2a89f.js"
+    "static/css/main.cb6ad004.css",
+    "static/js/main.a77783e4.js"
   ]
 }

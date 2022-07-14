@@ -1,0 +1,17 @@
+@import '../../sass/Constants.scss';
+
+.shadow {
+  content: '';
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-dark-06;
+}
+
+.shadow_active {
+  display: block;
+}

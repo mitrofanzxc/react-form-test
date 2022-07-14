@@ -16,7 +16,7 @@ const Form: FC = () => {
   const blurHandler = (event: FocusEvent<HTMLInputElement>) => {
     const NAME = event.currentTarget.name;
     switch (NAME) {
-      case 'phone':
+      case 'tel':
         setIsPhoneBlur(true);
         break;
       case 'checkbox':
@@ -46,8 +46,28 @@ const Form: FC = () => {
     }
   };
 
+  const sendFormData = () => {
+    const XHR = new XMLHttpRequest();
+
+    const form = document.querySelector('.form') as HTMLFormElement;
+    const formData = new FormData(form);
+
+    XHR.addEventListener('load', (event) => {
+      const target = event.target as XMLHttpRequest;
+      console.log(target.responseText);
+    });
+
+    XHR.addEventListener('error', (event) => {
+      console.log('Oops! Something went wrong.');
+    });
+
+    XHR.open('POST', 'https://example.com/cors.php');
+    XHR.send(formData);
+  };
+
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
+    sendFormData();
     setIsPhone('');
     setIsChecked(false);
   };
@@ -64,8 +84,11 @@ const Form: FC = () => {
     <section className="form-wrapper">
       <h2 className="h2">Leave a request quickly!</h2>
       <p>Enter the number, we will call you within 10 minutes during work hours:</p>
-      <p>Mon – Fri 9:00 - 18:00, Sat 10:00 - 18:00.</p>
-      <form data-testid="form" className="form">
+      <p>
+        <span className="fw-medium">Mon – Fri:&nbsp;</span>9:00 - 18:00,{' '}
+        <span className="fw-medium">Sat:&nbsp;</span>10:00 - 18:00.
+      </p>
+      <form data-testid="form" method="post" className="form">
         <InputTel
           onBlur={(event) => blurHandler(event)}
           onChange={(event) => phoneHandler(event)}

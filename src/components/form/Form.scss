@@ -7,7 +7,7 @@
   justify-content: space-between;
   flex-direction: column;
   width: $base * 120;
-  height: $base * 120;
+  height: $base * 100;
   margin: auto;
   padding: $base * 10;
   background: rgb(237, 242, 245);
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: $base 0;
+  height: $base * 3;
   font-size: $fs-xs;
   font-weight: $fw-medium;
   color: $color-error;

@@ -38,32 +38,33 @@ textarea {
 }
 
 .h1 {
-  font-size: calcResponsiveSize(18, 55, 321, 1920);
+  font-size: calcResponsiveSize(32, 55, 321, 1920);
   font-weight: $fw-light;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calcResponsiveSize(16, 18, 240, 320);
+    font-size: calcResponsiveSize(26, 32, 240, 320);
   }
 }
 
 .h2 {
-  font-size: calcResponsiveSize(13, 32, 321, 1920);
-  font-weight: $fw-regular;
+  font-size: calcResponsiveSize(22, 32, 321, 1920);
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.02em;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calcResponsiveSize(11, 13, 240, 320);
+    font-size: calcResponsiveSize(16, 22, 240, 320);
   }
 }
 
 .h3 {
-  font-size: calcResponsiveSize(10, 14, 321, 1920);
+  font-size: calcResponsiveSize(18, 22, 321, 1920);
   font-weight: $fw-semi-bold;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calcResponsiveSize(8, 10, 240, 320);
+    font-size: calcResponsiveSize(16, 18, 240, 320);
   }
 }
 

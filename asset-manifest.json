@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/react-form-test/static/css/main.cb6ad004.css",
-    "main.js": "/react-form-test/static/js/main.a77783e4.js",
+    "main.css": "/react-form-test/static/css/main.052d24bf.css",
+    "main.js": "/react-form-test/static/js/main.28d8aa61.js",
+    "static/media/loading-success.gif": "/react-form-test/static/media/loading-success.52232fe34112d1236e6b.gif",
     "static/media/Montserrat-Bold.woff": "/react-form-test/static/media/Montserrat-Bold.180ba33d8de7dcfe80a0.woff",
     "static/media/Montserrat-Regular.woff": "/react-form-test/static/media/Montserrat-Regular.3db65dc4b858f0fed4fb.woff",
     "static/media/Montserrat-Medium.woff": "/react-form-test/static/media/Montserrat-Medium.d42dad28f6470e5162c2.woff",
     "static/media/Montserrat-SemiBold.woff": "/react-form-test/static/media/Montserrat-SemiBold.197213592de7a2a62e06.woff",
     "static/media/Montserrat-Light.woff": "/react-form-test/static/media/Montserrat-Light.be142e6c3747b7b87e60.woff",
+    "static/media/loading-fail.gif": "/react-form-test/static/media/loading-fail.2b7fff3c3505efe5a6aa.gif",
     "static/media/Montserrat-Regular.woff2": "/react-form-test/static/media/Montserrat-Regular.8b56391ed36ea95337c6.woff2",
     "static/media/Montserrat-Bold.woff2": "/react-form-test/static/media/Montserrat-Bold.cfceaf4e74789fc9df24.woff2",
     "static/media/Montserrat-Medium.woff2": "/react-form-test/static/media/Montserrat-Medium.d6bbb7c3c86aa8edcd0a.woff2",
@@ -15,11 +17,11 @@
     "index.html": "/react-form-test/index.html",
     "static/media/arrow-right.svg": "/react-form-test/static/media/arrow-right.ee70254d437467a9cf3c.svg",
     "static/media/arrow.svg": "/react-form-test/static/media/arrow.ea54e3ccae61a36c993a.svg",
-    "main.cb6ad004.css.map": "/react-form-test/static/css/main.cb6ad004.css.map",
-    "main.a77783e4.js.map": "/react-form-test/static/js/main.a77783e4.js.map"
+    "main.052d24bf.css.map": "/react-form-test/static/css/main.052d24bf.css.map",
+    "main.28d8aa61.js.map": "/react-form-test/static/js/main.28d8aa61.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb6ad004.css",
-    "static/js/main.a77783e4.js"
+    "static/css/main.052d24bf.css",
+    "static/js/main.28d8aa61.js"
   ]
 }

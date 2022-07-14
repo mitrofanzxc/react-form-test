@@ -15,3 +15,42 @@
 .shadow_active {
   display: block;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: $base * 120;
+  height: $base * 100;
+  margin: auto;
+  padding: 0;
+  background: rgb(237, 242, 245);
+  background: -moz-linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(237, 242, 245, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f5",endColorstr="#ffffff",GradientType=1);
+  border-radius: $base * 7;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal_active {
+  display: flex;
+}
+
+.modal__gif {
+  width: 100%;
+  height: auto;
+}

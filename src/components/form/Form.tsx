@@ -8,6 +8,7 @@ import './Form.scss';
 
 const Form: FC = () => {
   const CONTAINER = document.querySelector('#root') as HTMLDivElement;
+
   const [isPhone, setIsPhone] = useState<string>('');
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [isPhoneBlur, setIsPhoneBlur] = useState<boolean>(false);
@@ -16,6 +17,7 @@ const Form: FC = () => {
   const [isCheckedError, setIsCheckedError] = useState<string>('You must accept the terms.');
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
   const [isModalActive, setIsModalActive] = useState<boolean>(false);
+  const [isFormSend, setIsFormSend] = useState<boolean>(false);
 
   const blurHandler = (event: FocusEvent<HTMLInputElement>) => {
     const NAME = event.currentTarget.name;
@@ -58,10 +60,12 @@ const Form: FC = () => {
     XHR.addEventListener('load', (event) => {
       const target = event.target as XMLHttpRequest;
       console.log('target.responseText ===', target.responseText);
+      setIsFormSend(true);
     });
 
     XHR.addEventListener('error', (event) => {
       console.log('Oops! Something went wrong.');
+      setIsFormSend(false);
     });
 
     XHR.open('POST', 'https://example.com/cors.php');
@@ -122,7 +126,10 @@ const Form: FC = () => {
           />
         </form>
       </section>
-      {createPortal(<Modal isModalActive={isModalActive} handleModal={handleModal} />, CONTAINER)}
+      {createPortal(
+        <Modal isModalActive={isModalActive} handleModal={handleModal} isFormSend={isFormSend} />,
+        CONTAINER
+      )}
     </>
   );
 };

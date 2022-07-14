@@ -1,0 +1,19 @@
+@import '../../sass/Constants.scss';
+
+.notfound {
+  .h1 {
+    margin-top: $base * 5;
+    font-size: $base * 40;
+    color: $color-orange;
+  }
+
+  .h2 {
+    margin-top: $base * 5;
+    font-size: $base * 20;
+  }
+
+  .h3 {
+    margin-top: $base * 10;
+    font-size: $base * 8;
+  }
+}

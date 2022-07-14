@@ -1,0 +1,144 @@
+@import './sass/Normalize.scss';
+@import './sass/Constants.scss';
+
+// === COMMON ===
+
+body {
+  @include spartan;
+  @include scroll;
+  background-color: $color-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button {
+  @include spartan;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: $base * 256;
+  margin: 0 auto;
+  padding: 0 $base * 17;
+
+  @media (max-width: $breakpoint-lg-min) {
+    padding: 0 $base * 8;
+  }
+
+  @media (max-width: $breakpoint-xs-min) {
+    padding: 0 $base * 4;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.button__dark {
+  display: block;
+  width: $base * 68;
+  height: $base * 13;
+  margin: $base * 5 auto 0 auto;
+  padding: 0;
+  font-size: $fs-l;
+  font-weight: $fw-medium;
+  letter-spacing: 0.063rem;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: $color-dark;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button__loading {
+  display: block;
+  margin: $base * 9 auto 0 auto;
+  padding: 0;
+  padding-right: $base * 2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button__filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $base * 6;
+  height: $base * 6;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: url('./images/icons/filter.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.button__grid__list {
+  width: $base * 4;
+  height: $base * 4;
+  background-image: url('./images/icons/list.svg');
+}
+
+.button__grid__square {
+  width: $base * 4;
+  height: $base * 4;
+  background-image: url('./images/icons/square.svg');
+}
+
+.button__sorting {
+  width: $base * 3;
+  height: $base * 3;
+  background-image: url('./images/icons/arrowdown.svg');
+}
+
+.button__all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  margin-top: $base * 10;
+  padding: 0;
+  text-align: center;
+  background-color: $color-gr-white;
+  border: none;
+}
+
+.button__all__link {
+  width: 100%;
+  padding: $base * 3 0;
+  font-size: $fs-s;
+  font-weight: $fw-medium;
+  letter-spacing: 0.063rem;
+  color: $color-dark-08;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-size: $fs-xl;
+  font-weight: $fw-semi-bold;
+  color: $color-dark;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-size: $fs-xs;
+  font-weight: $fw-semi-bold;
+  color: $color-dark-04;
+  text-transform: uppercase;
+}
+
+a {
+  color: $color-white;
+}
+
+// === / COMMON ===

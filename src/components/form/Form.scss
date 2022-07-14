@@ -1,0 +1,215 @@
+@import '../../sass/Constants.scss';
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 27.7vw;
+  height: 53.3vh;
+  margin: auto;
+  padding: $base * 14 $base * 13 $base * 19 $base * 13;
+  background: rgb(237, 242, 245);
+  background: -moz-linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(237, 242, 245, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f5",endColorstr="#ffffff",GradientType=1);
+  border-radius: $base * 7;
+  text-align: center;
+
+  @media (max-width: $breakpoint-lg-min) {
+    width: 70vw;
+    height: 80vh;
+  }
+}
+
+.modal-active {
+  display: flex;
+}
+
+.modal__shadow {
+  content: '';
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-dark-06;
+}
+
+.modal__shadow-active {
+  display: block;
+}
+
+.modal__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .h2 {
+    font-size: $base * 6;
+    font-weight: $fw-medium;
+    letter-spacing: 0.02em;
+    line-height: $base * 6;
+    text-align: center;
+  }
+
+  .primary-button {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h3 {
+    text-transform: none;
+  }
+}
+
+.modal__img {
+  display: block;
+  width: 60%;
+  height: auto;
+  border-radius: $base * 4;
+  border: $base solid $color-orange;
+
+  @media (max-width: $breakpoint-md-min) {
+    width: 90%;
+  }
+}
+
+.button-navigation {
+  @include montserrat;
+  position: absolute;
+  top: -$base * 8;
+  right: -$base * 8;
+  z-index: 2;
+  display: block;
+  min-width: $base * 8;
+  min-height: $base * 8;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.2);
+  }
+}
+
+.button-navigation__close {
+  background-image: url('../../images/modal/modal-close.svg');
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $base;
+  width: 80%;
+}
+
+.input-phone {
+  color: $color-dark;
+  text-align: center;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox__info {
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  text-align: left;
+}
+
+.error-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $base * 2;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  color: red;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  display: block;
+  margin-bottom: $base * 5;
+  padding-left: $base * 7;
+  font-size: $base * 4;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $base * 5;
+  height: $base * 5;
+  background-color: $color-white;
+  border: 0.125rem solid $color-orange;
+  border-radius: $base;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: $color-orange-02;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: $color-orange;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 40%;
+  top: 15%;
+  width: $base;
+  height: $base * 2;
+  border: solid $color-white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

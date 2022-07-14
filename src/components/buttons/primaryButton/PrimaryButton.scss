@@ -1,0 +1,61 @@
+@import '../../../sass/Constants.scss';
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $base * 3;
+  max-width: $base * 75;
+  max-height: $base * 20;
+  padding: $base * 6;
+  border: none;
+  border-radius: $base * 10;
+  color: $color-white;
+  cursor: pointer;
+}
+
+.arrow {
+  min-width: $base * 5;
+  min-height: $base * 5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.arrow-up {
+  background-image: url('../../../images/icons/arrow.svg');
+}
+
+.arrow-right {
+  background-image: url('../../../images/icons/arrow-right.svg');
+}
+
+.bg-green {
+  background-color: $color-green;
+  transition: $transition-01;
+
+  &:hover {
+    background-color: $color-green-light;
+    transition: $transition-01;
+  }
+
+  &:disabled {
+    background-color: $color-dark-02;
+    cursor: not-allowed;
+  }
+}
+
+.bg-orange {
+  background-color: $color-orange;
+  transition: $transition-01;
+
+  &:hover {
+    background-color: $color-orange-light;
+    transition: $transition-01;
+  }
+
+  &:disabled {
+    background-color: $color-dark-02;
+    cursor: not-allowed;
+  }
+}

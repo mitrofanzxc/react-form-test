@@ -1,13 +1,8 @@
 import { FC, useEffect } from 'react';
+import { IModal } from '../../shared/types';
 import loadingSuccessGif from '../../images/modal/loading-success.gif';
 import loadingFailGif from '../../images/modal/loading-fail.gif';
 import './Modal.scss';
-
-export interface IModal {
-  isModalActive: boolean;
-  handleModal: () => void;
-  isFormSend: boolean;
-}
 
 const Modal: FC<IModal> = ({ isModalActive, handleModal, isFormSend }) => {
   useEffect(() => {

@@ -1,13 +1,6 @@
-import { FC, FocusEvent } from 'react';
+import { FC } from 'react';
+import { IInputCheckbox } from '../../../shared/types';
 import './InputCheckbox.scss';
-
-export interface IInputCheckbox {
-  onBlur: (event: FocusEvent<HTMLInputElement>) => void;
-  onChange: () => void;
-  isChecked: boolean;
-  isCheckedBlur: boolean;
-  isCheckedError: string;
-}
 
 const InputCheckbox: FC<IInputCheckbox> = ({
   onBlur,

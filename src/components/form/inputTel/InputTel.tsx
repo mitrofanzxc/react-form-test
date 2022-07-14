@@ -1,13 +1,6 @@
-import { FC, FocusEvent, ChangeEvent } from 'react';
+import { FC } from 'react';
+import { IInputTel } from '../../../shared/types';
 import './InputTel.scss';
-
-export interface IInputTel {
-  onBlur: (event: FocusEvent<HTMLInputElement>) => void;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  isPhone: string;
-  isPhoneBlur: boolean;
-  isPhoneError: string;
-}
 
 const InputTel: FC<IInputTel> = ({ onBlur, onChange, isPhone, isPhoneBlur, isPhoneError }) => {
   return (

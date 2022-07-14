@@ -73,25 +73,11 @@ const Form: FC = () => {
           isPhoneBlur={isPhoneBlur}
           isPhoneError={isPhoneError}
         />
-        <label className="input-phone__label">
-          Enter your phone number:
-          <input
-            className="primary-button input-phone"
-            type="tel"
-            id="tel"
-            name="tel"
-            placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _"
-            onBlur={(event) => blurHandler(event)}
-            onChange={(event) => phoneHandler(event)}
-            value={isPhone}
-          />
-        </label>
-        <p className="error-field">{isPhoneBlur && isPhoneError ? isPhoneError : ''}</p>
         <PrimaryButton
-          description="Call me"
-          className="bg-orange"
-          arrow="arrow-right"
           type="submit"
+          description="Call me"
+          arrow="arrow-right"
+          className="bg-orange"
           onClick={handleSubmit}
           disabled={!isFormValid}
         />

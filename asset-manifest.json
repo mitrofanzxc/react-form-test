@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-form-test/static/css/main.3b90cf44.css",
+    "main.js": "/react-form-test/static/js/main.0bad887b.js",
+    "static/media/Montserrat-Bold.woff": "/react-form-test/static/media/Montserrat-Bold.180ba33d8de7dcfe80a0.woff",
+    "static/media/Montserrat-Regular.woff": "/react-form-test/static/media/Montserrat-Regular.3db65dc4b858f0fed4fb.woff",
+    "static/media/Montserrat-Medium.woff": "/react-form-test/static/media/Montserrat-Medium.d42dad28f6470e5162c2.woff",
+    "static/media/Montserrat-SemiBold.woff": "/react-form-test/static/media/Montserrat-SemiBold.197213592de7a2a62e06.woff",
+    "static/media/Montserrat-Light.woff": "/react-form-test/static/media/Montserrat-Light.be142e6c3747b7b87e60.woff",
+    "static/media/Montserrat-Regular.woff2": "/react-form-test/static/media/Montserrat-Regular.8b56391ed36ea95337c6.woff2",
+    "static/media/Montserrat-Bold.woff2": "/react-form-test/static/media/Montserrat-Bold.cfceaf4e74789fc9df24.woff2",
+    "static/media/Montserrat-Medium.woff2": "/react-form-test/static/media/Montserrat-Medium.d6bbb7c3c86aa8edcd0a.woff2",
+    "static/media/Montserrat-SemiBold.woff2": "/react-form-test/static/media/Montserrat-SemiBold.1d679c8257a6a9caa9bd.woff2",
+    "static/media/Montserrat-Light.woff2": "/react-form-test/static/media/Montserrat-Light.cf7b6a954e570df2f420.woff2",
+    "index.html": "/react-form-test/index.html",
+    "static/media/arrow-right.svg": "/react-form-test/static/media/arrow-right.ee70254d437467a9cf3c.svg",
+    "static/media/arrow.svg": "/react-form-test/static/media/arrow.ea54e3ccae61a36c993a.svg",
+    "main.3b90cf44.css.map": "/react-form-test/static/css/main.3b90cf44.css.map",
+    "main.0bad887b.js.map": "/react-form-test/static/js/main.0bad887b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b90cf44.css",
+    "static/js/main.0bad887b.js"
+  ]
+}

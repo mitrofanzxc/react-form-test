@@ -1,13 +1,73 @@
 @import '../../../sass/Constants.scss';
 
 .input-checkbox__wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .input-checkbox__label {
+  position: relative;
+  display: block;
+  margin-bottom: $base * 5;
+  padding-left: $base * 7;
+  font-size: $base * 4;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    .input-checkbox ~ .input-checkbox__checkmark {
+      background-color: $color-orange-02;
+    }
+  }
+
+  .input-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+
+    &:checked ~ .input-checkbox__checkmark {
+      background-color: $color-orange;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
 }
 
 .input-checkbox__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $base * 5;
+  height: $base * 5;
+  background-color: $color-white;
+  border: 0.125rem solid $color-orange;
+  border-radius: $base;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 40%;
+    top: 15%;
+    width: $base;
+    height: $base * 2;
+    border: solid $color-white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 }
 
 .input-checkbox__info {
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  text-align: left;
 }

@@ -66,6 +66,13 @@ const Form: FC = () => {
       <p>Enter the number, we will call you within 10 minutes during work hours:</p>
       <p>Mon – Fri 9:00 - 18:00, Sat 10:00 - 18:00.</p>
       <form data-testid="form" className="form">
+        <InputTel
+          onBlur={(event) => blurHandler(event)}
+          onChange={(event) => phoneHandler(event)}
+          isPhone={isPhone}
+          isPhoneBlur={isPhoneBlur}
+          isPhoneError={isPhoneError}
+        />
         <label className="input-phone__label">
           Enter your phone number:
           <input
@@ -88,25 +95,13 @@ const Form: FC = () => {
           onClick={handleSubmit}
           disabled={!isFormValid}
         />
-        <div className="checkbox__wrapper">
-          <label className="container">
-            <input
-              type="checkbox"
-              name="checkbox"
-              onBlur={(event) => blurHandler(event)}
-              onChange={checkboxHandler}
-              checked={isChecked}
-            />
-            <span className="checkmark" />
-          </label>
-          <p className="checkbox__info">
-            By clicking the button you agree to the terms&nbsp;
-            <a href="#" className="medium color-orange">
-              Privacy Policy
-            </a>
-          </p>
-        </div>
-        <p className="error-field">{isCheckedBlur && isCheckedError ? isCheckedError : ''}</p>
+        <InputCheckbox
+          onBlur={(event) => blurHandler(event)}
+          onChange={checkboxHandler}
+          isChecked={isChecked}
+          isCheckedBlur={isCheckedBlur}
+          isCheckedError={isCheckedError}
+        />
       </form>
     </section>
   );
